@@ -1,17 +1,13 @@
-// FUNCTION IMPLEMENTATION (MULTIPLE BUGS)
 const isPalindrome = function(str) {
   let noSpaces = str.split(" ").join("");
   noSpaces = noSpaces.toLowerCase();
-  // console.log(noSpaces);
   const midIndex = Math.floor(noSpaces.length / 2);
-  // console.log(midIndex);
   let lastIndex = 0;
   if (noSpaces.length === 1) {
     lastIndex = 1;
   } else {
     lastIndex = noSpaces.length - 1;
   }
-  // console.log(lastIndex);
 
   for (let i = 0; i < midIndex; i++) {
     if (noSpaces[i] !== noSpaces[lastIndex - i]) {
@@ -36,7 +32,6 @@ const assertPalindrome = function(word, expected) {
 
 
 // TEST CODE
-// These should all pass assertion, but they don't.
 assertPalindrome('p', true);
 assertPalindrome('racecar', true);
 assertPalindrome('my gym', true);
